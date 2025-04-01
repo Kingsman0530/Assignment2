@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://0nakva5k7usf"]
+
+[ext_resource type="Script" uid="uid://c6i45smc140bu" path="res://Player.gd" id="1_2qwk3"]
+[ext_resource type="PackedScene" uid="uid://dl1v7meiepdoo" path="res://Character1-1.glb" id="1_qqcwn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqs15"]
+radius = 0.197731
+height = 0.95046
+
+[node name="Player3D" type="RigidBody3D"]
+script = ExtResource("1_2qwk3")
+move_speed = null
+max_speed = null
+jump_force = null
+gravity = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0367589, 0, 0)
+shape = SubResource("CapsuleShape3D_pqs15")
+
+[node name="Character1-1" parent="." instance=ExtResource("1_qqcwn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00161667, 0.123426, -0.000771523)
+
+[node name="CameraPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.919135, -0.393942, 0, 0.393942, 0.919135, 0, 0.529221, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(1, 9.93753e-08, 0, -8.74228e-08, 1.13672, 0, 0, 0, -1, 0, 0, -3.5)
+fov = 50.0
