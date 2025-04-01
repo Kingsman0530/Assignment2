@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://0nakva5k7usf" path="res://Chara.tscn" id="1_rfqud"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+flip_faces = true
+size = Vector3(15, 5, 15)
+
+[node name="Player3D" parent="." instance=ExtResource("1_rfqud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115673, -2.10715, -1.21695)
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37501, 0, 0)
+light_energy = 1.162
