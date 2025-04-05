@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1gvy8k0hm5k7"]
+
+[ext_resource type="Script" uid="uid://bkqiyxqpohxco" path="res://control.gd" id="1_4druq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4druq")
+
+[node name="MyButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Click Me
+"
+
+[connection signal="pressed" from="MyButton" to="." method="_on_my_button_pressed"]
