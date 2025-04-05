@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://4vld3xlklx8s"]
 
 [ext_resource type="PackedScene" uid="uid://0nakva5k7usf" path="res://Chara.tscn" id="1_rfqud"]
 
